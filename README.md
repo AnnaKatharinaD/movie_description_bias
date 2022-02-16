@@ -9,3 +9,5 @@ Bias_model: trains a word2vec or
 fasttext model on the given csv-dataset
 
 Run_model: show results of analysis
+
+gender_clusters: includes the clustered results of words biased towards or against the gender vectors
