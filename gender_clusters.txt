@@ -1,0 +1,63 @@
+#Clusters for ['female', 'woman', 'girl', 'mother', 'daughter', 'sister', 'she', 'her', 'hers']
+supernatural magical french apocalyptic german 
+busy diary emotional previous mutual strong unhappy open expensive potential naked aggressive youngest duncan sebastian short experienced recent anonymous aware arrogant affected suspicious prepared difficult unstable due sensitive important biological interested surprised concerned unable similar certain 
+new 
+other 
+own 
+high 
+single abusive younger older successful 
+glamorous upper rich gorgeous rebellious lesbian flat troubled nice independent jealous sudden poor attractive medical naive adoptive next eccentric spanish ian funeral psychic empty ambitious depressed charismatic italian alcoholic 
+small 
+best 
+demonic arrive scottish victorian central tiny religious native urban australian southern irish original sadistic white free futuristic large indian eastern northern japanese vicious foreign 
+young 
+american 
+horrible precious genetic physical terrible individual higher moral inevitable worst full psychological unknown worse normal capable common red rid loose necessary least mythical greater villainous possible artificial unite larger 
+different 
+sexual romantic 
+serial 
+much such 
+same many few several 
+isolated rural live 
+married 
+unexpected unlikely 
+mysterious 
+classic modern 
+little 
+famous english 
+dangerous 
+conservative social various typical sharp constant eternal lower disastrous unusual accepted musical contemporary complex cultural enigmatic creative artistic hilarious golden actual competitive comic obsessive adventurous annual dramatic traditional daily exotic fresh legal cynical prestigious fantastic corporate second formidable 
+wrong 
+popular senior 
+
+#Clusters for ['male', 'man', 'boy', 'son', 'father', 'brother', 'he', 'him', 'his']
+entire greatest impossible final extraordinary ultimate 
+serious hard low huge angry bigger lucky available guilty ready separate current usual particular unwilling average related happy larger certain similar artificial unable greater several few surprised interested large common normal important due 
+old 
+green incredible biggest illegal arctic treacherous valuable massive superior heavy federal mixed fourth diabolical outrageous complete elusive racial unstoppable perilous advanced newest natural western murderous nefarious largest scientific european ordinary revolutionary main stumble grand monstrous unprecedented psychotic foreign vicious formidable unite northern corporate eastern villainous fantastic indian mythical necessary prestigious loose rid futuristic red capable exotic unknown psychological apocalyptic annual full 
+black special 
+other 
+high 
+best 
+civil british american 
+such much 
+whole alive willing clear able easy safe possible least worse 
+dead wrong 
+own 
+criminal chinese russian 
+mexican tough private local 
+general notorious legendary operative responsible soviet political global 
+true 
+latest great lucrative controversial injured quiet financial nicky solitary cal unemployed second alcoholic italian concerned charismatic cynical legal fresh biological sensitive depressed daily traditional dramatic ambitious empty free adventurous psychic funeral unstable obsessive 
+most 
+dangerous 
+good bad 
+professional personal 
+major third idealistic national african infamous hot japanese german white 
+international powerful military nuclear united 
+last 
+real 
+unlikely 
+big 
+former 
+successful 
