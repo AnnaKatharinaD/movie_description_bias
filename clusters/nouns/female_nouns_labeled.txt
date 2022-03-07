@@ -1,0 +1,101 @@
+0000001 002  -----   -----
+0000003 010  NN1     fashion                  B5 O4.2+ X4.2
+0000003 020  NN1     freshman                 P1/S2mf
+0000005 010  NN1     francisco                Z1m
+0000005 020  NN1     aunt                     S4f
+0000005 030  NN1     photographer             C1/S2mf
+0000005 040  NN1     dame                     S7.1+/S2.1f K4/S2.1f
+0000005 050  NN1     kate                     Z1f
+0000005 060  NN1     nurse                    B3/S2mf
+0000005 070  NN1     dancer                   K1/S2mf
+0000007 010  NN1     carrie                   Z1f
+0000007 020  NN1     male                     S2.2m
+0000007 030  NN1     internet                 Y2
+0000007 040  NN1     attraction               O4.2+ S3.2 O3
+0000007 050  NN1     ballet                   K4
+0000007 060  NN2     teenagers                T3-/S2mf
+0000007 070  NN1     campus                   M7/P1
+0000007 080  NN1     dress                    B5
+0000007 090  NN1     sara                     Z1f
+0000007 100  NN1     spring                   O2 T1.3 W3/M4
+0000009 010  NN1     husband                  S4m
+0000011 010  NN1     girl                     S2.1f L2f@
+0000013 010  NN1     woman                    S2.1f
+0000015 010  NN2     students                 P1/S2mf
+0000017 010  NN1     mother                   S4f A11.1+++
+0000019 010  NN2     women                    S2.1f
+0000021 010  NN1     beauty                   O4.2+ B4
+0000021 020  NN1     tradition                S1.1.1 T1.1.1 A6.2+
+0000021 030  NN1     florence                 Z2 Z1f
+0000021 040  NN1     heiress                  S4mf
+0000021 050  NN1     hair                     B1
+0000021 060  NN1     opera                    K2
+0000021 070  VVZ@    visits                   S1.1.1 M1
+0000021 080  JJ      passionate               X5.2+ S3.2
+0000021 090  NN1     portrait                 C1 Q2.1
+0000021 100  NN1     christine                Z1f
+0000021 110  NN1     guest                    H4/S2mf S1.2.2-/S2mf
+0000021 120  NN1     fairy                    S9/S2mf S3.2/S2.2m
+0000021 130  NN1     diary                    Q1.2
+0000021 140  NN1     festival                 K1/S1.1.3+ S9
+0000021 150  NN1     subway                   M3
+0000021 160  NN1     guardian                 S7.1+/S2mf S4/S2mf S8+/A15+/S2mf
+0000021 170  NN1     stepmother               S4f
+0000021 180  NN2     visions                  X4.1 X3.4 X7+ S9@
+0000021 190  VVZ     watches                  X3.4 S7.1 X2.4 A1.3+
+0000021 200  NN1     model                    O2/A5.4- A4.1 X4.2 A5.1+++ C1/S2mf B5/I3.2/S2mf
+0000021 210  NN1     alternative              A6.1-
+0000021 220  NN1     snow                     W4 Q4.3%
+0000021 230  VVZ     marries                  S4 A2.2
+0000021 240  NN1     silence                  X3.2- A10-
+0000021 250  NN1     housewife                S2.1/H1f B5%
+0000023 010  NN1     student                  P1/S2mf
+0000025 010  NN1     boyfriend                S3.2/S2.2m
+0000027 010  NN1     forest                   W3/L3
+0000027 020  NN2     woods                    O1.1 W3/L3
+0000029 010  NN1     teen                     T3
+0000029 020  NN1     teenager                 T3-/S2mf
+0000031 010  NN2     daughters                S4f
+0000031 020  NN2     sisters                  S4f S9/S2.1f B3/S2.1f S2.1f A2.2
+0000033 010  NN1     romance                  S3.2 Q4.4/S3.2 Z2
+0000035 010  NN1     wedding                  S4
+0000037 010  NN1     sister                   S4f S9/S2.1f B3/S2.1f S2.1f A2.2
+0000039 010  NN1     queen                    S7.1+/S2.1f S3.2/S2.2m K5.2
+0000041 010  NN2     girls                    S2.1f L2f@
+0000043 010  JJ      virgin                   S3.2 A2.1-
+0000043 020  NN1     vera                     Z1f
+0000043 030  NN2     emotions                 E1
+0000043 040  VV0     anger                    E3-
+0000043 050  NN1     hall                     H2 H1 S9/H1c
+0000043 060  JJ      instant                  T1.1.2
+0000043 070  NN1     possibility              A7+
+0000043 080  NN1     presence                 M6 A3+ S1.1.3+ S1.2 S9
+0000043 090  NN1     sleep                    B1
+0000043 100  NN1     education                P1 X2.3+
+0000043 110  NN1     household                S4c B4
+0000043 120  NN1     affection                E2+
+0000043 130  NN1     wendy                    Z1/E2+mf[i1.2.1 Z1f
+0000043 140  NN2     lovers                   Z1/E2+mf[i1.2.2 S3.2/S2mf E2+/S2mf
+0000045 010  VV0%    summer                   T1.3
+0000047 010  NN1     class                    P1c A4.1 S5+c O4.2+
+0000049 010  NN1     female                   S2.1f
+0000051 010  VVG     boarding                 M1 H4 O2 G3@
+0000051 020  JJ      principal                A11.1+++
+0000053 010  NN1     room                     H2 N3.6
+0000055 010  NN1     nightmare                X4.1/A5.1- A5.1-
+0000055 020  NN1     horror                   Q4.3/E5-[i2.2.1 E5- O4.2- G2.2-/S2mf
+0000055 030  NN2     films                    Q4.3/E5-[i2.2.2 Q4.3 O2/C1 O1.1 O1.2 B3
+0000057 010  NN1     pregnancy                B1
+0000057 020  NN1     jane                     Z1f
+0000057 030  NN1     sophie                   Z1f
+0000057 040  NN1     support                  S8+ O2 I1.1 B5%
+0000057 050  NN1     bride                    S4f
+0000057 060  NN1     lady                     S2.1f S7.1+/S2.1f
+0000057 070  NN1     rebecca                  Z1f Z3
+0000057 080  NN1     jess                     Z1f
+0000057 090  NN1     behavior                 S1.1.1 A1.1.1
+0000057 100  VVZ     dates                    T3 S3.2
+0000057 110  NN1     attention                X5.1+ S8+
+0000057 120  NN1     mia                      Z99
+0000059 010  NN2     victims                  A1.1.2/G2.1/S2mf B2-/S2mf
+0000061 010  NN2     relationships            S3.1 S3.2 A2.2 S4

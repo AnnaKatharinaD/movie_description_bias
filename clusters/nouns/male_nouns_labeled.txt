@@ -1,0 +1,101 @@
+0000001 002  -----   -----
+0000003 010  JJ      stark                    O4.1 O4.2- N3.2+ N5.1+
+0000003 020  NN1     bruce                    Z1mf
+0000003 030  NN1     iron                     O1.1 B4/O2 O2
+0000003 040  NN1     master                   S7.1+/S2.2m X9.1+/S2.2m P1/S2.2m P1 C1/S2.2m S9/S2.2m
+0000003 050  NN1     redemption               S9 S8+ A9+
+0000003 060  NN1     empire                   G1.1 I2.1/S+
+0000003 070  VVD     kung                     Z99
+0000003 080  NN1     victory                  X9.2+
+0000003 090  NN1     fighter                  M5/G3fn X8+/S2mf K5.1/S2mf
+0000005 010  VVZ     hopkins                  Z1mf
+0000005 020  NN1     devil                    S9 G2.2-/S2mf
+0000007 010  NN1     man                      S2.2m
+0000009 010  NN1     hostage                  A1.7+/S2mf
+0000009 020  NN1     robbery                  G2.1- A9-
+0000011 010  NN1     son                      S4m
+0000013 010  NN1     sidekick                 Z99
+0000013 020  NN1     motorcycle               M3fn
+0000013 030  NN2     activities               A1.1.1
+0000013 040  NN1     roy                      Z1m
+0000013 050  NN2     associates               S3.1/S2mf
+0000013 060  NN1     reputation               I3.2 A5.1
+0000013 070  NN1     archer                   K5.1/S2mf
+0000013 080  NN1     troy                     Z99
+0000013 090  VV0     retire                   I3.1- M1
+0000013 100  NN1     wallace                  Z1mf
+0000013 110  NN1     loser                    X9.2-/S2mf
+0000013 120  NN1     youth                    T3-/S2mf T3-
+0000013 130  NN1     rider                    L2/S2mf M3/S2mf Q2.2
+0000013 140  NN1     table                    H5 Q1.2 N2
+0000013 150  NN1     suit                     B5 G2.1 K5.2
+0000013 160  NN1     partnership              S5+c S4 S3.2
+0000013 170  NN1     purpose                  X7+ A2.2 A1.5.1
+0000013 180  NN2     colleagues               I3.2/S2mf
+0000013 190  JJR     slacker                  O4.5 X5.2- A5.1- N3.8-
+0000013 200  NN1     heroin                   F3
+0000013 210  NN1     pot                      O2 O1.1 I1.1 F3
+0000013 220  NN1     arm                      B1 S5+c G3 O2 B5
+0000015 010  NN1     president                G1.1/S7.1+/S2mf
+0000017 010  NN1     hero                     Q4.1/S2.2m E5+/S2.2m E2+/S2.2m
+0000019 010  NN1     team                     S5+c K5.1/S5+c S5+
+0000021 010  NN1     gang                     S5+c
+0000023 010  NN1     mission                  X7+ G3 S9 S9/H1
+0000025 010  NN1     prison                   G2.1/H1
+0000027 010  NN1     drug                     B3 F3
+0000029 010  NN1     justice                  G2.1+ G2.2+
+0000029 020  NN1     lieutenant               G3/S7.1+/S2mf G2.1/S2mf S7.1+/S2mf S8+/S2mf
+0000029 030  NN1     underworld               G2.1-c S9
+0000029 040  NN1     mercenary                G3/S2mf
+0000029 050  NN1     gold                     O1.1 O4.3 I1
+0000029 060  NN2     arms                     G2.2-/S2mf[i1.2.1 G3/S2mf[i1.2.1 B1 S5+ G3 O2 B5
+0000031 010  NN1     dealer                   G2.2-/S2mf[i1.2.2 G3/S2mf[i1.2.2 I2.1/S2mf K5.2/S2mf F3/S2mf
+0000031 020  NN1     ray                      W2 Y1
+0000033 010  NN1     top                      M6 N4 N5.1+ O2 B5 K6 N5.1-
+0000035 010  NN1     leader                   S7.1+/S2mf A5.1+++/S2mf Q4.2 G2.1/S2mf
+0000037 010  NN1     max                      N5.1+ Z1m
+0000039 010  NN1     partner                  S3.1/S2mf S3.2/S2mf S4mf
+0000041 010  NN1     veteran                  G3/S2mf T3+/S2mf
+0000041 020  NN1     operation                A1.1.1 B3 G3
+0000041 030  NN2     weapons                  G3 X4.1
+0000041 040  JJ      general                  N5+ A4.2-
+0000041 050  NN1     rogue                    G2.2-/S2mf
+0000043 010  NN1     spider                   L2mfn
+0000045 010  VV0     jack                     A1.1.1
+0000047 010  JJ      vincent                  Z1mf
+0000047 020  NN1     debt                     I1.2
+0000047 030  NNU1    dollar                   I1
+0000047 040  NN1     mobster                  Z99
+0000047 050  NN1     dom                      S9/S2.2m
+0000047 060  NN1     contract                 I2.1 G2.1
+0000047 070  NN1     mark                     O4.2- Q1.2 A5/P1 N3.1 Q1.1
+0000047 080  NNU2    dollars                  I1
+0000047 090  NN1     theft                    G2.1-/A9+
+0000047 100  NN1     associate                S5+/S2mf S3.1mf
+0000047 110  NN1     hitman                   Z99
+0000047 120  NN1     rival                    S7.3+/S2mf
+0000047 130  NN1     enforcer                 Z99
+0000047 140  NN1     code                     G2.1 A10-/Q1.1 G2.2 A4.1 Y2@ B3% B1%
+0000047 150  NN2     thugs                    G2.2-/S2mf
+0000047 160  NN1     kingpin                  Z99
+0000047 170  NN1     jail                     G2.1/H1
+0000049 010  NN2     skills                   X9.1+
+0000051 010  VV0     jake                     Z1m
+0000051 020  NN1     gangster                 G2.1-/S2mf
+0000051 030  NN1     driver                   M3/S2mf O2
+0000051 040  NN1     sean                     Z1mf
+0000053 010  NN1     dog                      L2mfn
+0000055 010  NN1     ego                      S1.2.3+
+0000055 020  NN1     mentor                   P1/S2mf
+0000055 030  NN1     baseball                 I1.2/K5.2[i2.2.1 K5.2
+0000055 040  NN1     billionaire              I1.2/K5.2[i2.2.2 I1.1/S2mf
+0000055 050  NN1     superhero                Z99
+0000055 060  NN1     parker                   M3/S2mf
+0000055 070  NN1     player                   K6/S2mf K5.2/S2mf K2/S2mf S1.1.3+/S2mf K4/S2mf K3
+0000055 080  VVZ     recruits                 I3.1/A9+
+0000055 090  NN1     sentence                 Q3 G2.1
+0000055 100  NN1     crisis                   A12-
+0000055 110  NN1     retirement               Z2[i3.2.1 I3.1-
+0000057 010  NN1     street                   Z2[i3.2.2 M3/H3
+0000059 010  NN1     mob                      S5+c
+0000061 010  NN1     heist                    Z99

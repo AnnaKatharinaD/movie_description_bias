@@ -1,0 +1,63 @@
+#Clusters for ['female', 'woman', 'girl', 'mother', 'daughter', 'sister', 'she', 'her', 'hers']
+fashion freshman 
+francisco aunt photographer dame kate nurse dancer 
+carrie male internet attraction ballet teenagers campus dress sara spring 
+husband 
+girl 
+woman 
+students 
+mother 
+women 
+beauty tradition florence heiress hair opera visits passionate portrait christine guest fairy diary festival subway guardian stepmother visions watches model alternative snow marries silence housewife 
+student 
+boyfriend 
+forest woods 
+teen teenager 
+daughters sisters 
+romance 
+wedding 
+sister 
+queen 
+girls 
+virgin vera emotions anger hall instant possibility presence sleep education household affection wendy lovers 
+summer 
+class 
+female 
+boarding principal 
+room 
+nightmare horror films 
+pregnancy jane sophie support bride lady rebecca jess behavior dates attention mia 
+victims 
+relationships 
+
+#Clusters for ['male', 'man', 'boy', 'son', 'father', 'brother', 'he', 'him', 'his']
+stark bruce iron master redemption empire kung victory fighter 
+hopkins devil 
+man 
+hostage robbery 
+son 
+sidekick motorcycle activities roy associates reputation archer troy retire wallace loser youth rider table suit partnership purpose colleagues slacker heroin pot arm 
+president 
+hero 
+team 
+gang 
+mission 
+prison 
+drug 
+justice lieutenant underworld mercenary gold arms 
+dealer ray 
+top 
+leader 
+max 
+partner 
+veteran operation weapons general rogue 
+spider 
+jack 
+vincent debt dollar mobster dom contract mark dollars theft associate hitman rival enforcer code thugs kingpin jail 
+skills 
+jake gangster driver sean 
+dog 
+ego mentor baseball billionaire superhero parker player recruits sentence crisis retirement 
+street 
+mob 
+heist 

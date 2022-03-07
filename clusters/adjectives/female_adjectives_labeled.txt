@@ -1,0 +1,101 @@
+0000001 002  -----   -----
+0000003 010  JJ      glamorous                O4.2+
+0000003 020  JJ      independent              S5-
+0000003 030  JJ      rich                     I1.1+ O4.1 N5+ X5.2+ E4.1+
+0000003 040  NN1     diary                    Q1.2
+0000003 050  JJ      lesbian                  S3.2/B1
+0000003 060  JJ      flat                     O4.4 O3 O4.1 K2 A5.3+
+0000003 070  JJ      nice                     O4.2+ S1.2.1+
+0000003 080  JJ      expensive                I1.3+
+0000003 090  JJ      gorgeous                 O4.2+
+0000003 100  JJ      busy                     A1.1.1/N5+
+0000003 110  JJ      jealous                  E4.1-/S3.2 E4.1-/A9
+0000003 120  JJ      poor                     I1.1- A5.1- N5- E4.1- X9.1-
+0000003 130  JJ      medical                  B3
+0000003 140  JJ      unhappy                  E4.1- E2- A1.4-
+0000003 150  JJT     youngest                 T3---
+0000003 160  JJ      attractive               O4.2+ S3.2
+0000003 170  JJ      experienced              X2.2+ X9.1+ I3.2
+0000003 180  JJ      arrogant                 S1.2.3+
+0000005 010  JJ      new                      T3-
+0000007 010  JJ      social                   S1.1.1
+0000007 020  JJ      upper                    M6 A11.1++
+0000007 030  JJ      conservative             G1.2 A6.2+ A1.3+ A9+
+0000007 040  JJ      rebellious               S8- E3-
+0000007 050  JJ      various                  A6.3+
+0000007 060  JJ      musical                  K2
+0000007 070  JJR     lower                    M6 N3.7-- N5-- I1.3-- A5.1-- A11.1-- E4.1-- X3.2-- G2.2-- S7.1--
+0000009 010  JJ      small                    N3.2- N3.7- N5- T3- A11.1- S5-/I2.1 X3.2- A5.1-
+0000011 010  JJ      mysterious               A6.2-
+0000013 010  JJ      anonymous                A10-
+0000013 020  JJ      mutual                   S1.1.2+
+0000013 030  JJ      potential                A7+
+0000013 040  JJ      typical                  A4.2+ A6.2+
+0000013 050  JJ      constant                 T2++ A2.1- S6+
+0000013 060  JJ      short                    A6.2+/N5-[i1.2.1 T1.3- N3.7- N3.3- N5- S1.2.4- N3.8+@ F1%
+0000013 070  JJ      accepted                 A6.2+/N5-[i1.2.2 A6.2+
+0000013 080  JJ      similar                  A6.1+
+0000013 090  NN1     duncan                   Z1m
+0000013 100  JJ      individual               N5-
+0000013 110  JJ      strong                   S1.2.5+ N5+ A5.1+ X5.2+ S7.1+ X9.1+ O4.1 S1.2.3+
+0000013 120  JJ@     affected                 A2.1+
+0000015 010  JJ      abusive                  E3-/S1.2 S1.2.4-
+0000015 020  JJ      single                   N5--- S5- S3.2- M3
+0000015 030  JJ      adoptive                 A9+ S4
+0000017 010  JJ      young                    T3-
+0000019 010  JJ      married                  S4 A2.2
+0000021 010  JJ      different                A6.1-
+0000023 010  MD      next                     N4
+0000025 010  JJ      horrible                 O4.2-
+0000025 020  JJ      sharp                    O4.4 A10+ X9.1+ X5.1+ N3.8+ B2- X3.1 E3- A5.3+ A5.1+ T4
+0000025 030  JJ      naked                    B5- A10+
+0000025 040  JJ      previous                 N4
+0000025 050  JJ      precious                 E2+ I1.1+ E2-% A5.4-%
+0000025 060  JJ      psychological            X1
+0000025 070  JJ      annual                   N6+
+0000025 080  JJ      terrible                 A5.1-
+0000025 090  JJ      moral                    G2.2+ E1
+0000025 100  JJ      aggressive               E3-
+0000025 110  VV0     rid                      A9-
+0000025 120  JJ      aware                    X2.2+
+0000025 130  JJ      genetic                  B1
+0000025 140  JJ      open                     A10+ S1.2.1+ X6- X5.2+ A7+
+0000025 150  JJ      full                     N5.1+ I3.2+
+0000025 160  JJ      tiny                     N3.2-
+0000027 010  JJ      serial                   N4
+0000029 010  JJ      live                     L1+ A3+ Q4.3 K2/K3 K1 O3 G3
+0000031 010  JJ      sexual                   S3.2
+0000031 020  JJ      romantic                 S3.2 Q4/S5
+0000033 010  JJ      isolated                 N3.3+ A1.8- S5- A10+
+0000033 020  JJ      rural                    F4/M7
+0000035 010  JJ      famous                   X2.2+
+0000037 010  JJ      unexpected               X2.6-
+0000039 010  JJ      popular                  E2+ S5+
+0000041 010  JJ      demonic                  S9
+0000041 020  JJ      eternal                  T2+++
+0000041 030  JJ      sudden                   N3.8+
+0000041 040  JJ      cultural                 C1 S1.1.1 S5+
+0000041 050  JJ      artistic                 C1
+0000041 060  JJ      victorian                T1.1.1
+0000041 070  JJ      complex                  A12-
+0000041 080  JJ      dramatic                 K4 E1/N5.2+ N3.8++
+0000041 090  JJ      unusual                  A6.2-
+0000041 100  JJ      enigmatic                X2.5-
+0000041 110  JJ      scottish                 Z2 Z2/S2mfnc
+0000041 120  JJ      contemporary             T1.1.2
+0000041 130  JJ      naive                    S1.2.6-
+0000041 140  JJ      irish                    Z2 Z2/Q3 Z2/S2mfnc
+0000041 150  JJ      unconventional           A6.2-
+0000043 010  JJ      magical                  S9 O4.2+
+0000045 010  JJR     younger                  T3--
+0000045 020  JJR     older                    T3++
+0000047 010  JJ      supernatural             S9
+0000049 010  JJ      modern                   T3-
+0000051 010  JJ      english                  Z2 Z2/Q3 Z2/S2mfnc
+0000053 010  DA2     many                     N5+
+0000055 010  JJ      physical                 B1 A1.6 E3- Y1
+0000055 020  JJ      difficult                A12-
+0000057 010  JJ      french                   Z2
+0000059 010  JJ      troubled                 E6-
+0000059 020  JJ      eccentric                A6.2-
+0000061 010  JJ      emotional                E1

@@ -1,0 +1,63 @@
+#Clusters for ['female', 'woman', 'girl', 'mother', 'daughter', 'sister', 'she', 'her', 'hers']
+glamorous independent rich diary lesbian flat nice expensive gorgeous busy jealous poor medical unhappy youngest attractive experienced arrogant 
+new 
+social upper conservative rebellious various musical lower 
+small 
+mysterious 
+anonymous mutual potential typical constant short accepted similar duncan individual strong affected 
+abusive single adoptive 
+young 
+married 
+different 
+next 
+horrible sharp naked previous precious psychological annual terrible moral aggressive rid aware genetic open full tiny 
+serial 
+live 
+sexual romantic 
+isolated rural 
+famous 
+unexpected 
+popular 
+demonic eternal sudden cultural artistic victorian complex dramatic unusual enigmatic scottish contemporary naive irish unconventional 
+magical 
+younger older 
+supernatural 
+modern 
+english 
+many 
+physical difficult 
+french 
+troubled eccentric 
+emotional 
+
+#Clusters for ['male', 'man', 'boy', 'son', 'father', 'brother', 'he', 'him', 'his']
+major national hot 
+direct heavy natural total available valuable western controversial outrageous newest 
+biggest advanced superior scientific mixed corporate main diabolical monstrous formidable elusive 
+former 
+notorious chinese federal infamous african idealistic 
+legendary entire greatest incredible extraordinary 
+most 
+hard 
+military united 
+personal 
+criminal russian 
+last 
+impossible whole clear 
+international nuclear 
+powerful 
+civil 
+professional 
+low nicky huge ready angry usual complete unwilling bigger willing unemployed quiet 
+real 
+big 
+good 
+general soviet political global 
+black 
+great 
+operative special 
+responsible 
+tough injured mexican psychotic cal illegal murderous 
+alive 
+arctic fourth green massive largest european separate 
+lucrative serious latest volatile current due average guilty concerned 
