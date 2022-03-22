@@ -7,21 +7,22 @@ import time
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from scipy import spatial
 from sklearn.cluster import KMeans
+import spacy
 import stanza
 import spacy_stanza
+
 '''from pymusas.file_utils import download_url_file
 from pymusas.lexicon_collection import LexiconCollection
 from pymusas.spacy_api.taggers import rule_based
 from pymusas.pos_mapper import UPOS_TO_USAS_CORE'''
-
 #nltk.download('averaged_perceptron_tagger')
 #nltk.download('vader_lexicon')
-
+#stanza.download("en")
 CUTOFF = 400
 
 
 def TrainModel(csv_document, csv_comment_column='text', outputname='outputModel', fasttext = False, window=4, minf=10, epochs=100,
-               ndim=200, lemmatiseFirst=False, verbose=True):
+               ndim=200, verbose=True):
     '''
     Load the documents from csv_document and column csv_comment_column, trains a embedding model with given parameters and saves it in outputname.
     csv_document <str> : path to reddit csv dataset
@@ -30,8 +31,44 @@ def TrainModel(csv_document, csv_comment_column='text', outputname='outputModel'
     fasttext <bool>: use fasttext if true, word2vec if not
     window = 4, minf=10, epochs=100, ndim=200, lemmatiseFirst = False, tolower= True : Training and preprocessing parameters
     '''
+    def load_csv_preprocess_stanza(path, column='text', nrowss=None, verbose=True):
+        '''
+        input:
+        path <str> : path to csv file
+        column <str> : column with text
+        nrowss <int> : number of rows to process, leave None if all
+        verbose <True/False> : verbose output
+        tolower <True/False> : transform all text to lowercase
+        returns:
+        list of preprocessed sentences
+        '''
+        trpCom = pd.read_csv(path, lineterminator='\n', nrows=nrowss)
+        documents = []
+        nlp = spacy_stanza.load_pipeline("en", exclude=['parser', 'ner'])
+        for i, row in enumerate(trpCom[column]):
+            if i > 10:
+                break
+            if i % 500000 == 0 and verbose == True:
+                print('\t...processing line {}'.format(i))
+            try:
+                doc = nlp(row)
+                documents.extend([token for token in doc])
+                #for doc in nlp.pipe(["Lots of texts", "Even more texts", "..."]):
+                #    print(doc.text)
+                '''pp = gensim.utils.simple_preprocess(row)
+                if (lemmatiseFirst == True):
+                    pp = [wordnet_lemmatizer.lemmatize(w, pos="n") for w in pp]
+                documents.append(pp)'''
+            except:
+                if (verbose):
+                    print('\terror with row {}'.format(row))
+        print('Done reading all documents')
+        for i, doc in enumerate(documents):
+            if len(doc) > CUTOFF:
+                documents[i] = doc[:CUTOFF]
+        return documents
 
-    def loadCSVAndPreprocess(path, column='body', nrowss=None, verbose=True):
+    def loadCSVAndPreprocess(path, column='text', nrowss=None, verbose=True):
         '''
         input:
         path <str> : path to csv file
@@ -50,9 +87,6 @@ def TrainModel(csv_document, csv_comment_column='text', outputname='outputModel'
                 print('\t...processing line {}'.format(i))
             try:
                 pp = gensim.utils.simple_preprocess(row)
-                if (lemmatiseFirst == True):
-                    pp = [wordnet_lemmatizer.lemmatize(w, pos="n") for w in pp]
-                documents.append(pp)
             except:
                 if (verbose):
                     print('\terror with row {}'.format(row))
@@ -104,7 +138,10 @@ def TrainModel(csv_document, csv_comment_column='text', outputname='outputModel'
                                                                                                   outputname, window,
                                                                                                   minf,
                                                                                                   epochs, ndim))
+
+    # train the model
     docs = loadCSVAndPreprocess(csv_document, csv_comment_column, nrowss=None, verbose=verbose)
+    #docs = load_csv_preprocess_spacy(csv_document, csv_comment_column, nrowss=None, verbose=verbose)
     starttime = time.time()
     print('-> Output will be saved in {}'.format(outputname))
     if fasttext:
@@ -118,26 +155,25 @@ sid = SentimentIntensityAnalyzer()
 
 def getMostSimilarWords(modelpath, c1, c2):
     model = Word2Vec.load(modelpath)
-    #words = list(model.wv.key_to_index)
     return model.wv.most_similar(positive=c1, negative=c2), model.wv.most_similar(positive=c2, negative=c1)
-    #print(model.wv.most_similar(positive=c1, negative=c2))
-    #print(model.wv.most_similar(positive=c2, negative=c1))
 
 
-def GetTopMostBiasedWords(modelpath, topk, c1, c2, pos=['JJ', 'JJR', 'JJS'], verbose=True):
+def GetTopMostBiasedWords(modelpath, topk, c1, c2, pos=['JJ', 'JJR', 'JJS'], use_spacy=False, verbose=True):
     '''
     modelpath <str> : path to skipgram w2v model
     topk <int> : topk words
     c1 list<str> : list of words for target set 1
     c2 list<str> : list of words for target set 2
     pos list<str> : List of parts of speech we are interested in analysing
+    use_spacy<bool>: True/False, enable if using spacy to filter for nouns
     verbose <bool> : True/False
     '''
+    if use_spacy:
+        nlp = spacy.load("en_core_web_sm")
 
     def calculateCentroid(model, words):
-        #print([w for w in words if w in model.wv.key_to_index])
         embeddings = [np.array(model.wv[w]) for w in words if w in model.wv]
-        centroid = np.zeros(len(embeddings[0])) #len(embeddings[0])
+        centroid = np.zeros(len(embeddings[0]))
         for e in embeddings:
             centroid += e
         return centroid / len(embeddings)
@@ -148,14 +184,15 @@ def GetTopMostBiasedWords(modelpath, topk, c1, c2, pos=['JJ', 'JJR', 'JJS'], ver
     # select the interesting subset of words based on pos
     model = Word2Vec.load(modelpath)
     words = list(model.wv.key_to_index)
-    #for word in words:
-    #    count = model.wv.get_vecattr(word, "count")
-    #    print(count)
     #print(model.wv.most_similar(positive=['female', 'woman', 'girl','she', 'her']))
     #print(model.wv.most_similar(positive=["brother",  "man" , "boy" , "son" , "he" , "his" , "him"]))
     words_sorted = sorted([(word, model.wv.get_vecattr(word, "count")) for word in words], key=lambda x: x[1],
                           reverse=False)
-    words = [w for w in words_sorted if nltk.pos_tag([w[0]])[0][1] in pos]
+    if use_spacy:
+        words = [w for w in words_sorted if nlp(w[0])[0].pos_ in pos]
+
+    else:
+        words = [w for w in words_sorted if nltk.pos_tag([w[0]])[0][1] in pos]
 
     if len(c1) < 1 or len(c2) < 1 or len(words) < 1:
         print('[!] Not enough word concepts to perform the experiment')
@@ -165,7 +202,6 @@ def GetTopMostBiasedWords(modelpath, topk, c1, c2, pos=['JJ', 'JJR', 'JJS'], ver
     winfo = []
     for i, w in enumerate(words):
         word = w[0]
-        #freq = w[2]
         rank = w[1]
         pos = nltk.pos_tag([word])[0][1]
         wv = model.wv[word]
@@ -174,7 +210,6 @@ def GetTopMostBiasedWords(modelpath, topk, c1, c2, pos=['JJ', 'JJR', 'JJS'], ver
         d1 = getCosineDistance(centroid1, wv)
         d2 = getCosineDistance(centroid2, wv)
         bias = d2 - d1
-        #  'freq': freq,
         winfo.append({'word': word, 'bias': bias, 'pos': pos, 'wv': wv, 'rank': rank, 'sent': sent})
 
         if (i % 100 == 0 and verbose == True):
@@ -222,7 +257,7 @@ def Cluster(biasc1, biasc2, r, repeatk, verbose=True):
 
     def createPartition(embeddings, biasw, k):
         preds = KMeans(n_clusters=k).fit_predict(embeddings)
-        # first create the proper clusters, then estiamte avg intra sim
+        # first create the proper clusters, then estimate avg intra sim
         all_clusters = []
         for i in range(0, k):
             clust = []
@@ -251,25 +286,32 @@ def Cluster(biasc1, biasc2, r, repeatk, verbose=True):
     print('[*] Intrasim of best partition found for ts2, ', mis2[0])
     return [mis1[1], mis2[1]]
 
-def label_clusters(cluster_list1, cluster_list2):
-    nlp = spacy.load('en_core_web_sm', exclude=['parser', 'ner']).add_pipe('usas_tagger')
-    text = 'Hello I am a cute girl'
-    output_doc = nlp(text)
-    print(output_doc)
-    print(f'Text\tLemma\tPOS\tUSAS Tags')
-    for token in output_doc:
-        print(f'{token.text}\t{token.lemma_}\t{token.pos_}\t{token._.usas_tags}')
 
+def print_to_file(clusteroutputpath, s1, s2, cl1, cl2):
     '''
-    #portuguese_usas_lexicon_url = 'https://raw.githubusercontent.com/UCREL/Multilingual-USAS/master/Portuguese/semantic_lexicon_pt.tsv'
-    #portuguese_usas_lexicon_file = download_url_file(portuguese_usas_lexicon_url)
-    # Includes the POS information
-    portuguese_lexicon_lookup = LexiconCollection.from_tsv(portuguese_usas_lexicon_file)
-    # excludes the POS information
-    portuguese_lemma_lexicon_lookup = LexiconCollection.from_tsv(portuguese_usas_lexicon_file,
-                                                                 include_pos=False)
-    # Add the lexicon information to the USAS tagger within the pipeline
-    usas_tagger.lexicon_lookup = portuguese_lexicon_lookup
-    usas_tagger.lemma_lexicon_lookup = portuguese_lemma_lexicon_lookup
-    # Maps from the POS model tagset to the lexicon POS tagset
-    usas_tagger.pos_mapper = UPOS_TO_USAS_CORE'''
+    clusteroutputpath: filepath to save the clusterings to
+    s1: list of words in vector related to first concept (female)
+    s2: list of words in vector related to second concept (male)
+    cl1 list<words>: clustering for concept 1
+    cl2 list<words>: clustering for concept 2
+    '''
+    print('Printing to file...')
+    with open(clusteroutputpath, 'w') as f:
+        f.write('#Clusters for %s' % s1)
+        f.write('\n')
+        for cluster in cl1:
+            cluster_list = [k['word'] for k in cluster]
+            for word in cluster_list:
+                f.write(word + ' ')
+            f.write('\n')
+        f.write('\n')
+        f.write('#Clusters for %s' % s2)
+        f.write('\n')
+        for cluster in cl2:
+            cluster_list = [k['word'] for k in cluster]
+            for word in cluster_list:
+                f.write(word + ' ')
+            f.write('\n')
+
+    print()
+    print('*Finished')
