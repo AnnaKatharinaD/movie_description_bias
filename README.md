@@ -4,7 +4,7 @@ demonstrated by
 Xavier Ferrer, Tom van Nuenen, Jose M. Such and Natalia Criado
 (https://arxiv.org/pdf/2008.02754.pdf)
 
-Code is partly based on https://github.com/xfold/LanguageBiasesInReddit.
+Code is based on https://github.com/xfold/LanguageBiasesInReddit.
 
 Semantically tagging biased words is done separately through http://ucrel-api.lancaster.ac.uk/usas/tagger.html
 using vertical layout.
