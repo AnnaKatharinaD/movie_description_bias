@@ -13,7 +13,9 @@ using vertical layout.
 - Bias_model: trains a word2vec or
 fasttext model on the given csv-dataset
 
-- Run_model: show results of analysis
+- movie_model_w2v: word2vec model trained on the combined plot outlines 
+
+- Run_model: runs and prints results of analysis
 
 - semantic_clusterings: gives statistics on the tagged word clusters
 
