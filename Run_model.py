@@ -74,4 +74,4 @@ for cluster in cl2:
 '''
 print words in clusters to file
 '''
-#Bias_model.print_to_file(clusteroutputpath, male, female, cl1, cl2)
+Bias_model.print_to_file(clusteroutputpath, male, female, cl1, cl2)
