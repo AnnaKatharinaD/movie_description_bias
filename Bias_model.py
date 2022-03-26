@@ -8,16 +8,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from scipy import spatial
 from sklearn.cluster import KMeans
 import spacy
-import stanza
-import spacy_stanza
 
-'''from pymusas.file_utils import download_url_file
-from pymusas.lexicon_collection import LexiconCollection
-from pymusas.spacy_api.taggers import rule_based
-from pymusas.pos_mapper import UPOS_TO_USAS_CORE'''
-#nltk.download('averaged_perceptron_tagger')
-#nltk.download('vader_lexicon')
-#stanza.download("en")
 CUTOFF = 400
 
 
@@ -31,43 +22,6 @@ def TrainModel(csv_document, csv_comment_column='text', outputname='outputModel'
     fasttext <bool>: use fasttext if true, word2vec if not
     window = 4, minf=10, epochs=100, ndim=200, lemmatiseFirst = False, tolower= True : Training and preprocessing parameters
     '''
-    def load_csv_preprocess_stanza(path, column='text', nrowss=None, verbose=True):
-        '''
-        input:
-        path <str> : path to csv file
-        column <str> : column with text
-        nrowss <int> : number of rows to process, leave None if all
-        verbose <True/False> : verbose output
-        tolower <True/False> : transform all text to lowercase
-        returns:
-        list of preprocessed sentences
-        '''
-        trpCom = pd.read_csv(path, lineterminator='\n', nrows=nrowss)
-        documents = []
-        nlp = spacy_stanza.load_pipeline("en", exclude=['parser', 'ner'])
-        for i, row in enumerate(trpCom[column]):
-            if i > 10:
-                break
-            if i % 500000 == 0 and verbose == True:
-                print('\t...processing line {}'.format(i))
-            try:
-                doc = nlp(row)
-                documents.extend([token for token in doc])
-                #for doc in nlp.pipe(["Lots of texts", "Even more texts", "..."]):
-                #    print(doc.text)
-                '''pp = gensim.utils.simple_preprocess(row)
-                if (lemmatiseFirst == True):
-                    pp = [wordnet_lemmatizer.lemmatize(w, pos="n") for w in pp]
-                documents.append(pp)'''
-            except:
-                if (verbose):
-                    print('\terror with row {}'.format(row))
-        print('Done reading all documents')
-        for i, doc in enumerate(documents):
-            if len(doc) > CUTOFF:
-                documents[i] = doc[:CUTOFF]
-        return documents
-
     def loadCSVAndPreprocess(path, column='text', nrowss=None, verbose=True):
         '''
         input:
@@ -87,6 +41,7 @@ def TrainModel(csv_document, csv_comment_column='text', outputname='outputModel'
                 print('\t...processing line {}'.format(i))
             try:
                 pp = gensim.utils.simple_preprocess(row)
+                documents.append(pp)
             except:
                 if (verbose):
                     print('\terror with row {}'.format(row))
@@ -94,6 +49,7 @@ def TrainModel(csv_document, csv_comment_column='text', outputname='outputModel'
         for i, doc in enumerate(documents):
             if len(doc) > CUTOFF:
                 documents[i] = doc[:CUTOFF]
+        print(documents)
         return documents
 
     def trainWEModel(documents, outputfile, ndim, window, minfreq, epochss):
@@ -108,8 +64,8 @@ def TrainModel(csv_document, csv_comment_column='text', outputname='outputModel'
         starttime = time.time()
         print('->->Starting training model {} with dimensions:{}, minf:{}, epochs:{}'.format(outputfile, ndim, minfreq,
                                                                                              epochss))
-        model = gensim.models.Word2Vec(documents, vector_size=ndim, window=window, min_count=minfreq, workers=5)
-        model.train(documents, total_examples=len(documents), epochs=epochss)
+
+        model = Word2Vec(documents, vector_size=ndim, window=window, min_count=minfreq, workers=5)
         model.save(outputfile)
         print('->-> Model saved in {}'.format(outputfile))
 
